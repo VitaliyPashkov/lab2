@@ -107,8 +107,8 @@ namespace Lab2
 
                 x = Math.PI / 180 * Math.Abs(x);
                 Console.WriteLine("Введите число q:");
-                while (!double.TryParse(Console.ReadLine(), out q))
-                    Console.WriteLine("Ошибка ввода. Попробуйте еще раз:");
+                while (!double.TryParse(Console.ReadLine(), out q) && q < 0 && q > 1)
+                    Console.WriteLine("Ошибка ввода точности. Попробуйте еще раз (от 0 до 1):");
 
                 int Factorial(int n)
                 {
